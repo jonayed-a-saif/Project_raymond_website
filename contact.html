@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+       .contact{
+        background-color:#f6e9eb;
+       }
+        a{
+        text-decoration: none;
+        color: #ea8d72;
+      }
+      a:hover{
+        color: #2a4153
+        ;
+      }
+      .nav-item{
+        font-family: Segoe UI;
+        font-size: .8vw;
+        line-height: 24px;
+        font-weight: 700;
+        color: #2a4153;
+        padding-left: 20px;
+        padding-right: 17px;
+      }
+      a{
+        text-decoration: none;
+        color: #2a4153;
+      }
+      a:hover{
+        color: #ea8d72;
+      }
+      .nav_img{
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .nav-link:hover{
+        color:#ea8d72;
+      }
+      .bb{
+            background-color: #ea8d72;
+            border: none;
+            border-radius: 10px;
+            color: aliceblue;
+            padding: 10px;
+        }
+        .bb:hover{
+            background-color: #ea8d72;
+            border: none;
+        }
+        .footer{
+      background-color:#f6e9eb;
+    }
+    .link-box{
+      margin-left: -5px;
+      margin-right: -5px;
+      display: flex;
+      flex-flow: row wrap;
+      margin-top: 25px;
+      list-style: none;
+    
+    }
+    .link-list{
+      width: 50%;
+      padding: 0 5px;
+      display: inline-block;
+      margin-bottom: 8px;
+      text-decoration: none;
+    }
+    .social-icon{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+    .icon{
+      height: 38px;
+      width: 38px;
+      margin-top: 25px;
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+    .store-box{
+      margin-left: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .ftr-right{
+      margin-top: 25px;
+    }
+    .form-control {
+    outline: none!important;
+    box-shadow: none!important;
+    }
+    .ftr_h3{
+      font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    font-family: Segoe UI;
+    color: #2a4153;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+    .ftr-button{
+      padding: 7px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    font-family: Segoe UI;
+    border-radius: 10px;
+    background: #ea8d72;
+    border: none;
+    text-transform: uppercase;
+    overflow: visible;
+    }
+    .d-flex{
+      display: flex !important;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="row" style="position: fixed; z-index: 9999; " >
+      <nav class="navbar navbar-expand-lg bg-body-tertiary"style="padding-bottom: 17px; " >
+        <div class="container-fluid" >
+          <a href="index.html">
+            <img src="./img/logo.png" alt="" height="30px" width="270px" style="padding-left: 50px;" >
+          </a>     
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" style="font-family: Poppins;font-size:medium;text-align: center;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    CATEGORIES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="shirt1.html">Shirts</a></li>
+                  <li><a class="dropdown-item" href="Shorts.html">Shorts</a></li>
+                  <li><a class="dropdown-item" href="suits.html">Suits</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">T-Shirts & Polo</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Jeans</a></li>            
+                  <li><a class="dropdown-item" href="shirt1.html">Ethnix</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Chinos & Trousers</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Jackets</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Sweatshirts</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Sweaters</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Bundi</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    BRANDS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="colorplus.html">Colorplus</a></li>
+                  <li><a class="dropdown-item" href="park_avenue.html">Park Avenue</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Ethnix By Raymond</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Raymond</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Parx</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fresh_arrival.html">FRESH ARRIVAL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="spring.html">SPRING SUMMER</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT US</a>
+              </li>
+              
+            </ul>
+          </div>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <a href=""><img class="nav_img" style="margin-left: 40px;" src="./img/cart.svg" alt=""height="30px" width="30px" ></a>
+          <a href=""><img class="nav_img" src="./img/ftr-heart.svg" alt=""height="30px" width="30px" ></a>
+          <a href="login.html"><img class="nav_img"style="margin-right: 30px;" src="./img/ftr-user.svg" alt=""height="30px" width="30px" ></a>
+        </div>
+      </nav>
+    </div>
+    <!-- end navbar -->
+    <div class="row contact">
+        <div class="row mt=2" >
+            <div class="col-6"style="margin-top:100px;padding-left: 70px;">
+                <form>
+                    <h1>Contact Us</h1>
+                    <p class="text-sm-start">Please fill the form below to help us answer your query better?</p>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="First Name*">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Last Name*">
+
+                    </div>
+                    <div class="mb-1">
+                        <label for="exampleInputEmail1" class="form-label"></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Phone">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email*">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">SELECT REASON*</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="DESCRIPTIONS">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ORDER NUMBER">
+
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I have read and understood the <a href="">Privacy Policy</a> and I acknowledge that my personal data will be used to respond to my request</label>
+                    </div>
+                    <button type="submit" class="bb">SEND MASSAGE</button>
+                </form>
+
+
+            </div>
+            <div class="col-6"style="margin-top:150px; padding-left: 100px; ">
+                <div class="row mt-5">
+                    <h3>Contact Us </h3>
+
+                </div>
+                <div class="row mt-3">
+                    <h3>Email</h3>
+                    <h7> support@myraymond.com</h7>
+                </div>
+                <div class="row mt-3">
+                    <h3>Address</h3>
+                    <h7>J K Gram, Thane West, Thane, Maharashtra 40060</h7>
+                </div>
+                <div class="row mt-3">
+                    <h3>Days of operation</h3>
+                    <h7>Monday To Saturda</h7>
+                </div>
+                <div class="row mt-3">
+                    <h3>Hours of operation</h3>
+                    <h7>9:30AM To 6:30PM</h7>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div> 
+    <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./img/logo.png" alt="" style="height: 44px;width: 344px;margin-top: 20px;">
+              <div class="row">
+                <ul class="link-box">
+                  <li class="link-list"><a href="">PRIVACY POLICY</a></li>
+                  <li class="link-list"><a href="">TERMS OF USE</a></li>
+                  <li class="link-list"><a href="">RETURN POLICY</a></li>
+                  <li class="link-list"><a href="">OFFER T&CS</a></li>
+                  <li class="link-list"><a href="">LOCATE A STORE</a></li>
+                  <li class="link-list"><a href="">CORPORATE INFORMATION</a></li>
+                  <li class="link-list"><a href="contact.html">CONTACT US</a></li>
+                  <li class="link-list"><a href="">FAQS</a></li>
+                  <li class="link-list"><a href="">BOOK A STYLIST</a></li>
+                  <li class="link-list"><a href="">SITE MAP</a></li>
+                </ul>
+              
+              </div>
+            </div>
+            <div class="col-md-4">
+              <ul class="social-icon">
+                <li ><a href=""><img class="icon" src="./img/facebook11.webp" alt=""></a></li>
+                <li ><a href=""><img class="icon" src="./img/instagram11.webp" alt=""></a></li>
+                <li ><a href=""><img class="icon" src="./img/pinterest11.webp" alt=""></a></li>
+                <li ><a href=""><img class="icon" src="./img/twitter11.webp" alt=""></a></li>
+              </ul>
+              <div class="store-box">
+                <a href=""><img src="./img/playstore.png" alt="" style="height: 44px;width: 130px;" ></a>
+                <a href=""><img src="./img/appstore.png" alt=""style="height: 44px;width: 130px;" ></a>
+              </div>  
+            </div>
+            <div class="col-md-4 ftr-right">
+              <h3 class="ftr_h3">SIGN UP AND NEVER MISS OUT</h3>
+              <span style="text-align: center;">GET THE LATEST FROM MYRAYMOND IN YOUR INBOX.</span>
+              <form action=""class="d-flex ftr_form mt-4">
+                <input type="email" placeholder="Enter your email address" class="form-control">
+                <button type="ftr-button">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>  
+        
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+      .nav-item{
+        font-family: Segoe UI;
+        font-size: .8vw;
+        line-height: 24px;
+        font-weight: 700;
+        color: #2a4153;
+        padding-left: 20px;
+        padding-right: 13px;
+      }
+      a{
+        text-decoration: none;
+        color: #2a4153;
+      }
+      a:hover{
+        color: #ea8d72;
+      }
+      .nav_img{
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .nav-link:hover{
+        color:#ea8d72;
+      }
+      .cards-wrapper{
+        column-gap: 30px;
+        padding-left: 220px;      
+        margin-bottom: 80px;
+      }
+      .card{
+        margin-left: 70px;
+      }
+      .card-wrapper{
+        margin-top: 30px;
+        column-gap: 25px;
+        padding-left: 150px;
+      }
+      .grid-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .grid-box{
+      width: 48%;
+      margin: 10px;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      padding-left: 100px;
+      padding-bottom: 20px;
+    }
+    
+      .img_v2{
+      height: 224px;
+      width: 467px;
+    }
+    .row-v2{
+      background-color: #dbf0f3;
+    }
+    .img_v3{
+      height: 291px;
+      width: 537px;
+    }
+    .row-v3{
+      background-color:#f6e9eb;
+    }
+    .footer{
+      background-color:#f6e9eb;
+    }
+    .link-box{
+      margin-left: -5px;
+      margin-right: -5px;
+      display: flex;
+      flex-flow: row wrap;
+      margin-top: 25px;
+      list-style: none;
+    
+    }
+    .link-list{
+      width: 50%;
+      padding: 0 5px;
+      display: inline-block;
+      margin-bottom: 8px;
+      text-decoration: none;
+    }
+    .social-icon{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+    .icon{
+      height: 38px;
+      width: 38px;
+      margin-top: 25px;
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+    .store-box{
+      margin-left: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .ftr-right{
+      margin-top: 25px;
+    }
+    .form-control {
+    outline: none!important;
+    box-shadow: none!important;
+    }
+    .ftr_h3{
+      font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    font-family: Segoe UI;
+    color: #2a4153;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+    .ftr-button{
+      padding: 7px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    font-family: Segoe UI;
+    border-radius: 10px;
+    background: #ea8d72;
+    border: none;
+    text-transform: uppercase;
+    overflow: visible;
+    }
+    .d-flex{
+      display: flex !important;
+    }
+    
+    
+    </style>
+  </head>
+  <body> 
+        
+    <div class="row" style="position: fixed; z-index: 9999; " >
+      <nav class="navbar navbar-expand-lg bg-body-tertiary"style="padding-bottom: 17px; " >
+        <div class="container-fluid" >
+          <a href="index.html">
+            <img src="./img/logo.png" alt="" height="30px" width="270px" style="padding-left: 50px;" >
+          </a>     
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" style="font-family: Poppins;font-size:medium;text-align: center;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    CATEGORIES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="shirt1.html">Shirts</a></li>
+                  <li><a class="dropdown-item" href="Shorts.html">Shorts</a></li>
+                  <li><a class="dropdown-item" href="suits.html">Suits</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">T-Shirts & Polo</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Jeans</a></li>            
+                  <li><a class="dropdown-item" href="shirt1.html">Ethnix</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Chinos & Trousers</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Jackets</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Sweatshirts</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Sweaters</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Bundi</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    BRANDS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="colorplus.html">Colorplus</a></li>
+                  <li><a class="dropdown-item" href="park_avenue.html">Park Avenue</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Ethnix By Raymond</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Raymond</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Parx</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fresh_arrival.html">FRESH ARRIVAL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="spring.html">SPRING SUMMER</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT US</a>
+              </li>
+              
+            </ul>
+          </div>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <a href=""><img class="nav_img" style="margin-left: 40px;" src="./img/cart.svg" alt=""height="30px" width="30px" ></a>
+          <a href=""><img class="nav_img" src="./img/ftr-heart.svg" alt=""height="30px" width="30px" ></a>
+          <a href="login.html"><img class="nav_img"style="margin-right: 30px;" src="./img/ftr-user.svg" alt=""height="30px" width="30px" ></a>
+        </div>
+      </nav>
+    </div>
+    <div class="row" style="padding-top: 65px;" >
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/banner_1.webp" class="d-block w-100" alt="..."  >
+          </div>
+          <div class="carousel-item">
+            <img src="./img/banner_2.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/banner_3.webp" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    </div>
+    <div class="row mt-5">
+        <h4 style="text-align: center;">EXPLORE BRANDS</h4>
+        <div class="container mt-5">
+            <div class="row " style="padding-left: 50px;" >
+                <div class="col-md-2">
+                    <img src="./img/brands_image_1.png" alt="" height="190px"width="260px"style="padding-left: 70px;" >
+                </div>
+                <div class="col-md-2">
+                    <img src="./img/brands_image_2.png" alt="" height="190px"width="260px" style="padding-left: 70px;">
+                </div>
+                <div class="col-md-2">
+                    <img src="./img/brands_image_3.png" alt=""height="190px"width="260px" style="padding-left: 70px;">
+                </div>
+                <div class="col-md-2">
+                    <img src="./img/brands_image_4.png" alt=""height="190px"width="260px" style="padding-left: 70px;">
+                </div>
+                <div class="col-md-2">
+                    <img src="./img/brands_image_5.png" alt=""height="190px"width="260px" style="padding-left: 70px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row mt-5">
+        <h4 style="text-align: center;">FRESH ARRIVAL</h4>
+        <img src="./img/fresh_arriva_sale.jpg" alt=""height="352px"width="200px">
+      </div>
+    </div>
+    <h4 class="mt-5" style="text-align: center; ">PERFECT STYLE FOR OCCASION</h4>
+    <div class="container cards-wrapper d-flex gx-5 mt-30">
+          <div class="card" style="height: 283px; width: 213px; ">
+            <img src="./img/Office (1).webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"style="text-align: center;">Office</h5>
+            </div>
+          </div>   
+          <div class="card" style="height: 283px; width: 213px; ">
+            <img src="./img/party.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"style="text-align: center;">Party</h5>
+            </div>
+          </div>  
+          <div class="card" style="height: 283px; width: 213px; ">
+            <img src="./img/Casual.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;" >Casual</h5>
+            </div>
+          </div>
+    </div>
+    <div class="row bg-body-tertiary mt-5" style="padding-bottom: 70px;padding-top: 20px;" >
+      <h4 class="mt-5" style="text-align: center; ">EXCLUSIVE COLLECTIONS</h4>
+      <div class="container card-wrapper d-flex gx-5 mt-3">
+        <div class="card" style="height: 120px; width: 213px; ">
+          <img src="./img/Winter1.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"style="text-align: center;">WINTER</h5>
+          </div>
+        </div>   
+        <div class="card" style="height: 120px; width: 213px; ">
+          <img src="./img/Weenend1.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"style="text-align: center;">WEEKEND</h5>
+          </div>
+        </div>  
+        <div class="card" style="height: 120px; width: 213px; ">
+          <img src="./img/Show your attitude.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;" >SHOW YOUR ATTITUDE</h5>
+          </div>
+        </div>
+        <div class="card" style="height: 120px; width: 213px; ">
+          <img src="./img/must_have1.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;" >MUST HAVE</h5>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="row row-v2 mt-5" style="padding-bottom: 10px;padding-top: 20px;" >
+      <h4  style="text-align: center; padding-bottom: 30px;padding-top: 40px; ">MORE TO EXPLORE</h4>
+      <div class="grid-section">
+        <a class="grid-box" href="">
+          <img class="img_v2" src="./img/1_v2.webp" alt="">
+        </a>
+        <a class="grid-box" href="">
+          <img class="img_v2" src="./img/2_v2.webp" alt="">
+        </a>
+        <a class="grid-box" href="">
+          <img class="img_v2" src="./img/3_v2.webp" alt="">
+        </a>
+        <a class="grid-box" href="">
+          <img class="img_v2" src="./img/4_v2.webp" alt="">
+        </a>
+
+      </div>
+    </div>
+    <div class="container">
+      <h4  style="text-align: center; padding-bottom: 0px;padding-top: 30px; ">EXCLUSIVE ON MYRAYMOND</h4>
+      <img src="./img/mfy_desk.webp" alt="" style="margin-top: 30px;margin-bottom: 30px;" >
+    </div>
+    <div class="row row-v3 mt-5" style="padding-bottom: 10px;padding-top: 20px;" >
+      <h4  style="text-align: center; padding-bottom: 30px;padding-top: 40px; ">EXPLORE BRANDS</h4>
+      <div class="grid-section">
+        <a class="grid-box" href="">
+          <img class="img_v3" src="./img/b1.webp" alt="">
+        </a>
+        <a class="grid-box" href="">
+          <img class="img_v3" src="./img/b2.webp" alt="">
+        </a>
+        <a class="grid-box" href="">
+          <img class="img_v3" src="./img/b3.webp" alt="">
+        </a>
+        <a class="grid-box" href="">
+          <img class="img_v3" src="./img/b4.webp" alt="">
+        </a>
+        <a class="grid-box" href="">
+          <img class="img_v3" src="./img/b5.webp" alt="">
+        </a>
+
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="./img/logo.png" alt="" style="height: 44px;width: 344px;margin-top: 20px;">
+            <div class="row">
+              <ul class="link-box">
+                <li class="link-list"><a href="">PRIVACY POLICY</a></li>
+                <li class="link-list"><a href="">TERMS OF USE</a></li>
+                <li class="link-list"><a href="">RETURN POLICY</a></li>
+                <li class="link-list"><a href="">OFFER T&CS</a></li>
+                <li class="link-list"><a href="">LOCATE A STORE</a></li>
+                <li class="link-list"><a href="">CORPORATE INFORMATION</a></li>
+                <li class="link-list"><a href="contact.html">CONTACT US</a></li>
+                <li class="link-list"><a href="">FAQS</a></li>
+                <li class="link-list"><a href="">BOOK A STYLIST</a></li>
+                <li class="link-list"><a href="">SITE MAP</a></li>
+              </ul>
+            
+            </div>
+          </div>
+          <div class="col-md-4">
+            <ul class="social-icon">
+              <li ><a href=""><img class="icon" src="./img/facebook11.webp" alt=""></a></li>
+              <li ><a href=""><img class="icon" src="./img/instagram11.webp" alt=""></a></li>
+              <li ><a href=""><img class="icon" src="./img/pinterest11.webp" alt=""></a></li>
+              <li ><a href=""><img class="icon" src="./img/twitter11.webp" alt=""></a></li>
+            </ul>
+            <div class="store-box">
+              <a href=""><img src="./img/playstore.png" alt="" style="height: 44px;width: 130px;" ></a>
+              <a href=""><img src="./img/appstore.png" alt=""style="height: 44px;width: 130px;" ></a>
+            </div>  
+          </div>
+          <div class="col-md-4 ftr-right">
+            <h3 class="ftr_h3">SIGN UP AND NEVER MISS OUT</h3>
+            <span style="text-align: center;">GET THE LATEST FROM MYRAYMOND IN YOUR INBOX.</span>
+            <form action=""class="d-flex ftr_form mt-4">
+              <input type="email" placeholder="Enter your email address" class="form-control">
+              <button type="ftr-button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      
+      
+
+
+
+
+
+
+
+          
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

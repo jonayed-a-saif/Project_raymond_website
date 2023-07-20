@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      /* Fixed sidenav, full height */
+      .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+      /* Style the sidenav links and the dropdown button */
+      .sidenav a, .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+      }
+      /* On mouse-over */
+      .sidenav a:hover, .dropdown-btn:hover {
+        color: black;
+      }
+      /* Main content */
+      .main {
+        margin-left: 200px; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+      } 
+      /* Add an active class to the active dropdown button */
+      .active {
+        background-color: green;
+        color: white;
+      }
+      /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+      .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+      }
+      /* Optional: Style the caret down icon */
+      .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+      }
+      .form-select{
+        padding-top: 0px;
+        background-color: aliceblue;
+      }
+      /* Some media queries for responsiveness */
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+
+      /* nav and footer css */
+      a{
+        text-decoration: none;
+        color: #ea8d72;
+      }
+      a:hover{
+        color: #2a4153
+        ;
+      }
+      .nav-item{
+        font-family: Segoe UI;
+        font-size: .8vw;
+        line-height: 24px;
+        font-weight: 700;
+        color: #2a4153;
+        padding-left: 19px;
+        padding-right: 17px;
+      }
+      a{
+        text-decoration: none;
+        color: #2a4153;
+      }
+      a:hover{
+        color: #ea8d72;
+      }
+      .nav_img{
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .nav-link:hover{
+        color:#ea8d72;
+      }
+      .bb{
+            background-color: #ea8d72;
+            border: none;
+            border-radius: 10px;
+            color: aliceblue;
+            padding: 10px;
+        }
+        .bb:hover{
+            background-color: #ea8d72;
+            border: none;
+        }
+        .footer{
+      background-color:#f6e9eb;
+    }
+    .link-box{
+      margin-left: -5px;
+      margin-right: -5px;
+      display: flex;
+      flex-flow: row wrap;
+      margin-top: 25px;
+      list-style: none;
+    
+    }
+    .link-list{
+      width: 50%;
+      padding: 0 5px;
+      display: inline-block;
+      margin-bottom: 8px;
+      text-decoration: none;
+    }
+    .social-icon{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+    .icon{
+      height: 38px;
+      width: 38px;
+      margin-top: 25px;
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+    .store-box{
+      margin-left: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .ftr-right{
+      margin-top: 25px;
+    }
+    .form-control {
+    outline: none!important;
+    box-shadow: none!important;
+    }
+    .ftr_h3{
+      font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    font-family: Segoe UI;
+    color: #2a4153;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+    .ftr-button{
+      padding: 7px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    font-family: Segoe UI;
+    border-radius: 10px;
+    background: #ea8d72;
+    border: none;
+    text-transform: uppercase;
+    overflow: visible;
+    }
+    .d-flex{
+      display: flex !important;
+    }
+    </style>
+</head>
+  <body>
+    <!-- Navbar -->
+    <div class="row" style="position: fixed; z-index: 9999; " >
+      <nav class="navbar navbar-expand-lg bg-body-tertiary"style="padding-bottom: 17px; " >
+        <div class="container-fluid" >
+          <a href="index.html">
+            <img src="./img/logo.png" alt="" height="30px" width="270px" style="padding-left: 50px;" >
+          </a>     
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" style="font-family: Poppins;font-size:medium;text-align: center;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    CATEGORIES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="shirt1.html">Shirts</a></li>
+                  <li><a class="dropdown-item" href="Shorts.html">Shorts</a></li>
+                  <li><a class="dropdown-item" href="suits.html">Suits</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">T-Shirts & Polo</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Jeans</a></li>            
+                  <li><a class="dropdown-item" href="shirt1.html">Ethnix</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Chinos & Trousers</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Jackets</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Sweatshirts</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Sweaters</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Bundi</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    BRANDS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="colorplus.html">Colorplus</a></li>
+                  <li><a class="dropdown-item" href="park_avenue.html">Park Avenue</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Ethnix By Raymond</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Raymond</a></li>
+                  <li><a class="dropdown-item" href="shirt1.html">Parx</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fresh_arrival.html">FRESH ARRIVAL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="spring.html">SPRING SUMMER</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT US</a>
+              </li>
+              
+            </ul>
+          </div>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <a href=""><img class="nav_img" style="margin-left: 40px;" src="./img/cart.svg" alt=""height="30px" width="30px" ></a>
+          <a href=""><img class="nav_img" src="./img/ftr-heart.svg" alt=""height="30px" width="30px" ></a>
+          <a href="login.html"><img class="nav_img"style="margin-right: 30px;" src="./img/ftr-user.svg" alt=""height="30px" width="30px" ></a>
+        </div>
+      </nav>
+    </div>
+  <!-- end navbar -->
+    <div class="row">
+        <div class="col-md-3">
+          <p  style="padding-top: 90px; padding-left:20px;">Home / Shirts</p>
+          <h3 style="padding-top: 10px; padding-left:20px;">Filters</h3>
+          <button class="dropdown-btn">+ Price
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+            
+          <button class="dropdown-btn">+ Color
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+
+          <button class="dropdown-btn">+Brand
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+          </div>
+              
+          <button class="dropdown-btn">+Size
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+          </div>
+
+          <button class="dropdown-btn">+ Price
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+          </div>
+              
+          <button class="dropdown-btn">+ Color
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+  
+          <button class="dropdown-btn">+Brand
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+                
+          <button class="dropdown-btn">+Size
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        
+           
+          <button class="dropdown-btn">+ Price
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+                  
+          <button class="dropdown-btn">+ Color
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+      
+          <button class="dropdown-btn">+Brand
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+                    
+        </div>
+              
+            
+        <!-- end -->
+        <div class="col-md-9">
+          <div class="row">
+            <p style="padding-top: 90px;">4616 Items Found</p>
+              <select class="form-select" aria-label="Default select example" style="width:30%; margin-right: 70px; margin-left: 665px;">
+                <h5 disabled>sort by</h5>
+                <option selected> Relevence </option>
+                <option value="1">BestSelling</option>
+                <option value="2">Newsfirst</option>
+                <option value="3">Price Low to High</option>
+                <option value="4">Price High to Low</option>
+                <option value="5">Discount</option>
+              </select>
+          </div><br>
+
+          <div class="row">
+            <div class="col-md-3" style="padding-left: 0px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/s-img1.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="parex.html" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 100px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG-2.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="parex.html" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 200px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG3.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="parex.html" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+          </div><br>
+
+          <!-- 2nd row image -->
+          <div class="row">
+            <div class="col-md-3" style="padding-left: 0px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG5.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 100px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG6.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 200px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG7.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <!-- 2nd row img end for shirt-->
+
+          <!-- 3rd row start for shirt -->
+          <div class="row">
+            <div class="col-md-3" style="padding-left: 0px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG5.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 100px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG6.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 200px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG7.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <!-- 3nd row img end for shirt-->
+          <!-- 4th row img start for shirt  -->
+          <div class="row">
+            <div class="col-md-3" style="padding-left: 0px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG5.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 100px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG6.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 200px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG7.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <!-- 4th row img end for shirt -->
+          <!-- 5th row start for shirt -->
+          <div class="row">
+            <div class="col-md-3" style="padding-left: 0px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG5.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 100px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG6.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 200px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG7.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <!-- 5th row img end for shirt-->
+          <!-- 6th row img start for shirt  -->
+          <div class="row">
+            <div class="col-md-3" style="padding-left: 0px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG5.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 100px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG6.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" style="padding-left: 200px;">
+              <div class="card" style="width: 15rem;">
+                <img src="./img/S-IMG7.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">parex</h5>
+                  <p class="card-text">Men slim fit red shirt <br>Tk.1259</p>
+                  <a href="#" class="btn btn-primary">Add TO Bag</a>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <!-- 6th row img end for shirt -->
+            
+        </div>
+          
+       
+          
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="./img/logo.png" alt="" style="height: 44px;width: 344px;margin-top: 20px;">
+            <div class="row">
+              <ul class="link-box">
+                <li class="link-list"><a href="">PRIVACY POLICY</a></li>
+                <li class="link-list"><a href="">TERMS OF USE</a></li>
+                <li class="link-list"><a href="">RETURN POLICY</a></li>
+                <li class="link-list"><a href="">OFFER T&CS</a></li>
+                <li class="link-list"><a href="">LOCATE A STORE</a></li>
+                <li class="link-list"><a href="">CORPORATE INFORMATION</a></li>
+                <li class="link-list"><a href="contact.html">CONTACT US</a></li>
+                <li class="link-list"><a href="">FAQS</a></li>
+                <li class="link-list"><a href="">BOOK A STYLIST</a></li>
+                <li class="link-list"><a href="">SITE MAP</a></li>
+              </ul>
+            
+            </div>
+          </div>
+          <div class="col-md-4">
+            <ul class="social-icon">
+              <li ><a href=""><img class="icon" src="./img/facebook11.webp" alt=""></a></li>
+              <li ><a href=""><img class="icon" src="./img/instagram11.webp" alt=""></a></li>
+              <li ><a href=""><img class="icon" src="./img/pinterest11.webp" alt=""></a></li>
+              <li ><a href=""><img class="icon" src="./img/twitter11.webp" alt=""></a></li>
+            </ul>
+            <div class="store-box">
+              <a href=""><img src="./img/playstore.png" alt="" style="height: 44px;width: 130px;" ></a>
+              <a href=""><img src="./img/appstore.png" alt=""style="height: 44px;width: 130px;" ></a>
+            </div>  
+          </div>
+          <div class="col-md-4 ftr-right">
+            <h3 class="ftr_h3">SIGN UP AND NEVER MISS OUT</h3>
+            <span style="text-align: center;">GET THE LATEST FROM MYRAYMOND IN YOUR INBOX.</span>
+            <form action=""class="d-flex ftr_form mt-4">
+              <input type="email" placeholder="Enter your email address" class="form-control">
+              <button type="ftr-button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
